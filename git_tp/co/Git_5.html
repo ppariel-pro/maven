@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+  <title>Afficher les modifications [Git]</title>
+  <meta charset="UTF-8">
+  <meta name="generator" content="SCENARI 4.2.104 / Opale 3.6.102">
+  <meta name="revision" content="2019-01-28 12:45">
+  <link rel="start" href="Git.html" title="Git">
+  <meta name="author" content>
+  <meta name="keywords" content>
+  <meta name="date" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../lib-md/w_scImgMgr/scImgMgr.css">
+  <link rel="stylesheet" type="text/css" href="../lib-md/w_scCodeMgr/scCodeMgr.css">
+  <script type="text/JavaScript">
+/*0*/ var scServices = {id:"jrgbtida"};
+/*1*/ window.scLoadParams = {destUri:"/co/Git_5.html", pathToRoot:"../"};
+</script>
+  <script type="text/JavaScript" src="../lib-sc/scCoLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scSiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scTiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scPaLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scMapMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scTooltipMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scDynUiMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/s_assmnt.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scDragMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scAssmntMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_mathjax/mathjaxMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/s_scSearch/scSearch.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_tplMgr/tplMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_scCodeMgr/scCodeMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_searchMgr/searchMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_scMediaMgr/scMediaMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_scImgMgr/scImgMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_outMgr/outMgr.js"></script>
+  <script type="text/JavaScript">
+/*0*/ try{if(window.opener && window.opener.scServices && window.opener.scServices.id == scServices.id) scServices = window.opener.scServices; else if(window.parent && window.parent.scServices && window.parent.scServices.id == scServices.id) scServices = window.parent.scServices;}catch(e){}
+scCodeMgr.registerCode("des:div.code");
+
+scImgMgr.registerAdaptedImage("ide:content/des:img");
+
+scImgMgr.registerGallery("des:div.galFra");
+
+scImgMgr.registerZoom("des:a.imgZoom",{toolbar:1,mag:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+</script>
+  <link type="text/css" rel="stylesheet" href="../skin/css/main.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../skin/css/skin.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../skin/css/print.css" media="print">
+  <script type="text/JavaScript">
+outMgr.declareOutline("Git.txt");
+	</script> </head>
+ <body class="default module expUc">
+  <div id="root"><header id="header" role="banner"><h1><span>Git</span></h1><nav role="navigation"><ul id="accessibility"><li class="waiContent"><a href="#content"><span>contenu</span></a></li><li class="waiMenu"><a href="#menu"><span>menu</span></a></li><li class="waiNav"><a href="#navigation"><span>navigation</span></a></li><li class="waiTools"><a href="#tools"><span>outils</span></a></li></ul></nav></header><main id="main" role="main"><div id="document"><div id="content" tabindex="-1"><div class="scroller"><hr class="hidden"><section class="hBk article expUc"><h2 class="hBk_ti"><span>Afficher les modifications</span></h2><div class="hBk_co "><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Pr&eacute;paration du projet</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-builtin">cd</span> my-app</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre>npp README.md <span class="cm-comment"># ajouter du texte</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-builtin">git</span> add README.md</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-builtin">git</span> commit <span class="cm-attribute">-m</span> <span class="cm-string">&quot;Commit readme&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-builtin">git</span> push</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre>npp README.md <span class="cm-comment"># ajouter du texte</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre><span class="cm-builtin">git</span> add README.md</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre><span class="cm-builtin">git</span> commit <span class="cm-attribute">-m</span> <span class="cm-string">&quot;Adding texte to  readme&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre><span class="cm-builtin">git</span> push</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre>npp README.md <span class="cm-comment"># ajouter du texte</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre><span class="cm-builtin">git</span> add README.md</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre><span class="cm-builtin">git</span> commit <span class="cm-attribute">-m</span> <span class="cm-string">&quot;Adding texte to intro section on readme&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre><span class="cm-builtin">git</span> push</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">14</div><pre>npp README.md <span class="cm-comment"># ajouter du texte</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">15</div><pre><span class="cm-builtin">git</span> add README.md</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">16</div><pre><span class="cm-builtin">git</span> commit <span class="cm-attribute">-m</span> <span class="cm-string">&quot;Adding texte one more time on readme&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">17</div><pre><span class="cm-builtin">git</span> push</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">18</div><pre>npp README.md <span class="cm-comment"># ajouter du texte</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">19</div><pre><span class="cm-builtin">git</span> add README.md</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">20</div><pre><span class="cm-builtin">git</span> commit <span class="cm-attribute">-m</span> <span class="cm-string">&quot;Adding again on readme&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">21</div><pre><span class="cm-builtin">git</span> push</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">cd my-app
+npp README.md # ajouter du texte
+git add README.md
+git commit -m &quot;Commit readme&quot;
+git push
+npp README.md # ajouter du texte
+git add README.md
+git commit -m &quot;Adding texte to  readme&quot;
+git push
+npp README.md # ajouter du texte
+git add README.md
+git commit -m &quot;Adding texte to intro section on readme&quot;
+git push
+npp README.md # ajouter du texte
+git add README.md
+git commit -m &quot;Adding texte one more time on readme&quot;
+git push
+npp README.md # ajouter du texte
+git add README.md
+git commit -m &quot;Adding again on readme&quot;
+git push</pre></div></div></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Visualiser les modifications entre le r&eacute;pertoire de travail et la zone de staging</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre>npp README.md <span class="cm-comment"># ajouter du texte</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-builtin">git</span> add README.md</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre>npp README.md <span class="cm-comment"># ajouter du texte</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre><span class="cm-builtin">git</span> <span class="cm-builtin">diff</span> <span class="cm-comment"># montre les modif entre le working dir et stagged dir</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre><span class="cm-builtin">git</span> difftool <span class="cm-comment"># c mieux</span></pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">npp README.md # ajouter du texte
+git status
+git add README.md
+npp README.md # ajouter du texte
+git status
+git diff # montre les modif entre le working dir et stagged dir
+git difftool # c mieux</pre></div></div></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Visualiser les modifications entre le r&eacute;pertoire de travail et Git Repository</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-builtin">git</span> <span class="cm-builtin">diff</span> HEAD</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">git</span> difftool HEAD</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">git diff HEAD
+git difftool HEAD</pre></div></div></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Visualiser les modifications entre la zone de staging et Git Repository</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-builtin">git</span> <span class="cm-builtin">diff</span> <span class="cm-attribute">--staged</span> HEAD</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">git</span> difftool <span class="cm-attribute">--staged</span> HEAD</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">git diff --staged HEAD
+git difftool --staged HEAD</pre></div></div></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Limiter la comparaison &agrave; un fichier (ou chemin)</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk "><p>git diff -- README.md</p><p>git difftool -- README.md</p></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Comparer des Commits</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-builtin">git</span> log <span class="cm-attribute">--oneline</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">git</span> <span class="cm-builtin">diff</span> 12653f6 HEAD</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-builtin">git</span> difftool 12653f6 HEAD</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-builtin">git</span> <span class="cm-builtin">diff</span> HEAD HEAD^</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-builtin">git</span> difftool HEAD HEAD^</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre><span class="cm-builtin">git</span> <span class="cm-builtin">diff</span> 12653f6 abc53f6 </pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre><span class="cm-builtin">git</span> difftool 12653f6 abc53f6 </pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">git log --oneline
+git diff 12653f6 HEAD
+git difftool 12653f6 HEAD
+git diff HEAD HEAD^
+git difftool HEAD HEAD^
+git diff 12653f6 abc53f6 
+git difftool 12653f6 abc53f6 </pre></div></div></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Comparer Local et Remote Master Branches</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-builtin">git</span> add .</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">git</span> commit <span class="cm-attribute">-m</span> <span class="cm-string">&quot;Last comparing commit&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-builtin">git</span> <span class="cm-builtin">diff</span> master origin/master</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-builtin">git</span> difftool master origin/master</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">git add .
+git commit -m &quot;Last comparing commit&quot;
+git status
+git diff master origin/master
+git difftool master origin/master</pre></div></div></div></div></div></div></section></div></section></div></div><div id="navigation" tabindex="-1"><hr class="hidden"><nav class="pageTurner" role="navigation"><ul><li><a rel="prev" href="Git_4.html" target="_self" class="btnNav prev" title="Pr&eacute;c&eacute;dent (Les bases de Git)"><span>Pr&eacute;c&eacute;dent</span></a></li><li><a rel="next" href="Git_6.html" target="_self" class="btnNav next" title="Suivant (Branche et merge)"><span>Suivant</span></a></li></ul></nav></div></div><div id="toolbox"><nav id="menu" class="pageSelector" role="navigation" tabindex="-1" aria-label="menu principal"><hr class="hidden"><ul class="mnu static" data-totalPages="6"><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="Git_1.html"><a href="Git_1.html" target="_self" class="item"><span>Configuration de git</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="Git_2.html"><a href="Git_2.html" target="_self" class="item"><span>Premier Pas</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="Git_3.html"><a href="Git_3.html" target="_self" class="item"><span>GitHub - Basics</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="Git_4.html"><a href="Git_4.html" target="_self" class="item"><span>Les bases de Git</span></a></div></li><li class="sel_yes anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="Git_5.html"><span class="item"><span>Afficher les modifications</span></span></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="Git_6.html"><a href="Git_6.html" target="_self" class="item"><span>Branche et merge</span></a></div></li></ul></nav><div id="tools" tabindex="-1"><hr class="hidden"><nav class="headingSelector" role="navigation"><ul class="mnu"><li class="anc_no home" data-position="uncle"><div class="lbl"><a href="Git.html" target="_self" class="item" type="index" title="Page d'accueil du module"><span>Accueil</span></a></div></li><li class="anc_yes module" data-position="parent"><div class="lbl"><span class="item"><span>Module</span></span></div></li></ul></nav></div></div></main><footer id="footer" role="contentinfo" tabindex="-1"><hr class="hidden"><a id="linkSp" target="_blank" href="https://www.scenari.org" title="R&eacute;alis&eacute; avec Scenari (nouvelle fen&ecirc;tre)"><span><img alt="R&eacute;alis&eacute; avec Scenari (nouvelle fen&ecirc;tre)" src="../skin/img/tpl/scBtn.png"></span></a></footer></div>
+  <script type="text/JavaScript" src="../skin/js/skin.js"></script>
+  <script type="text/javascript">tplMgr.init();scCodeMgr.init();scMediaMgr.init("des:.mediaPlayer",{processYoutubeUrls :true});scImgMgr.init();outMgr.init();</script>
+ </body>
+</html>

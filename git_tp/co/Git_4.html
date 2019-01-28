@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+  <title>Les bases de Git [Git]</title>
+  <meta charset="UTF-8">
+  <meta name="generator" content="SCENARI 4.2.104 / Opale 3.6.102">
+  <meta name="revision" content="2019-01-28 12:45">
+  <link rel="start" href="Git.html" title="Git">
+  <meta name="author" content>
+  <meta name="keywords" content>
+  <meta name="date" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../lib-md/w_scImgMgr/scImgMgr.css">
+  <link rel="stylesheet" type="text/css" href="../lib-md/w_scCodeMgr/scCodeMgr.css">
+  <script type="text/JavaScript">
+/*0*/ var scServices = {id:"jrgbtida"};
+/*1*/ window.scLoadParams = {destUri:"/co/Git_4.html", pathToRoot:"../"};
+</script>
+  <script type="text/JavaScript" src="../lib-sc/scCoLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scSiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scTiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scPaLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scMapMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scTooltipMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scDynUiMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/s_assmnt.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scDragMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scAssmntMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_mathjax/mathjaxMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/s_scSearch/scSearch.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_tplMgr/tplMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_scCodeMgr/scCodeMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_searchMgr/searchMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_scMediaMgr/scMediaMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_scImgMgr/scImgMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_outMgr/outMgr.js"></script>
+  <script type="text/JavaScript">
+/*0*/ try{if(window.opener && window.opener.scServices && window.opener.scServices.id == scServices.id) scServices = window.opener.scServices; else if(window.parent && window.parent.scServices && window.parent.scServices.id == scServices.id) scServices = window.parent.scServices;}catch(e){}
+scCodeMgr.registerCode("des:div.code");
+
+scImgMgr.registerAdaptedImage("ide:content/des:img");
+
+scImgMgr.registerGallery("des:div.galFra");
+
+scImgMgr.registerZoom("des:a.imgZoom",{toolbar:1,mag:1,titlePath:"par:/nsi:/des:span.capTi"});
+
+</script>
+  <link type="text/css" rel="stylesheet" href="../skin/css/main.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../skin/css/skin.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../skin/css/print.css" media="print">
+  <script type="text/JavaScript">
+outMgr.declareOutline("Git.txt");
+	</script> </head>
+ <body class="default module expUc">
+  <div id="root"><header id="header" role="banner"><h1><span>Git</span></h1><nav role="navigation"><ul id="accessibility"><li class="waiContent"><a href="#content"><span>contenu</span></a></li><li class="waiMenu"><a href="#menu"><span>menu</span></a></li><li class="waiNav"><a href="#navigation"><span>navigation</span></a></li><li class="waiTools"><a href="#tools"><span>outils</span></a></li></ul></nav></header><main id="main" role="main"><div id="document"><div id="content" tabindex="-1"><div class="scroller"><hr class="hidden"><section class="hBk article expUc"><h2 class="hBk_ti"><span>Les bases de Git</span></h2><div class="hBk_co "><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Cr&eacute;ation d'un nouveau projet fresh-project</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk "><p>Ouvrir dans windows un terminal <strong class="txt_emp_is ">git</strong> dans le r&eacute;pertoire de votre choix ex&nbsp;: <strong class="txt_emp_is ">c&nbsp;:\space</strong></p></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-builtin">git</span> init fresh-project</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-builtin">cd</span> fresh-project</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-builtin">ls</span> <span class="cm-attribute">-al</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre><span class="cm-builtin">cd</span> .git</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre><span class="cm-builtin">cd</span> ..</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre>pwd</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre><span class="cm-builtin">git</span> status</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">git init fresh-project
+ls
+cd fresh-project
+ls
+ls -al
+cd .git
+ls
+cd ..
+pwd
+git status</pre></div></div></div><div class="rBk "><p>Ouvrir https://hipsum.co/ dans un navigateur</p></div><div class="rBk res"><figure role="group" class="resInFlow png"><div class="resInFlow_co "><img src="../res/20_ipsum.png" width="571" height="530" alt></div></figure></div><div class="rBk "><p>S&eacute;lectionner et Copier le premier paragraphe par exemple</p></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre>npp hipster.txt <span class="cm-comment"># Coller le texte s&eacute;lectionner puis enregistrer</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-builtin">git</span> add hipster.txt</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-builtin">git</span> commit <span class="cm-attribute">-</span>&gt; Ajouter du texte puis enregistrer </pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre><span class="cm-builtin">cd</span> ..</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre>pwd</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre><span class="cm-builtin">rm</span> <span class="cm-attribute">-rf</span> fresh-project/</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre></pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">npp hipster.txt # Coller le texte s&eacute;lectionner puis enregistrer
+git status
+git add hipster.txt
+git status
+git commit -&gt; Ajouter du texte puis enregistrer 
+git status
+cd ..
+pwd
+ls
+rm -rf fresh-project/
+</pre></div></div></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Cr&eacute;ation de projet &agrave; partir de source existante</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk "><p>T&eacute;l&eacute;charger un template de projet html/css &agrave; partir de http://www.initializr.com/</p></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre>pwd</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">cd</span> c:\space</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre>unzip c:/space/initializr-verekia-4.0.zip</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-builtin">mv</span> initializr web-project <span class="cm-comment"># renommer</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre><span class="cm-builtin">cd</span> web-project</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre><span class="cm-builtin">git</span> init</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre><span class="cm-builtin">ls</span> <span class="cm-attribute">-al</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre><span class="cm-builtin">git</span> add .</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">14</div><pre><span class="cm-builtin">git</span> commit <span class="cm-attribute">-m</span> <span class="cm-string">&quot;My first commit, inline&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">15</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">16</div><pre><span class="cm-builtin">ls</span> <span class="cm-attribute">-al</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">17</div><pre><span class="cm-builtin">rm</span> <span class="cm-attribute">-rf</span> .git <span class="cm-comment"># si on l'enleve alors git ne g&eacute;re plus les fichiers</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">18</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">19</div><pre><span class="cm-builtin">git</span> status <span class="cm-comment"># error not a git repository</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">20</div><pre><span class="cm-builtin">cd</span> ..</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">21</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">22</div><pre><span class="cm-builtin">rm</span> <span class="cm-attribute">-rf</span> web-project</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">23</div><pre><span class="cm-builtin">rm</span> <span class="cm-attribute">-rf</span> initializr-verekia-4.0.zip</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">pwd
+cd c:\space
+unzip c:/space/initializr-verekia-4.0.zip
+ls
+mv initializr web-project # renommer
+ls
+cd web-project
+ls
+git init
+ls -al
+git status
+git add .
+git status
+git commit -m &quot;My first commit, inline&quot;
+git status
+ls -al
+rm -rf .git # si on l'enleve alors git ne g&eacute;re plus les fichiers
+ls
+git status # error not a git repository
+cd ..
+ls
+rm -rf web-project
+rm -rf initializr-verekia-4.0.zip</pre></div></div></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Cr&eacute;ation d'un projet &agrave; partir de GitHub (Remote )</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk "><p>Pour commencer, faire un fork du projet suitvant https://github.com/Formation67/my-app dans votre espace GitHub</p></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre>pwd</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">cd</span> space</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-builtin">git</span> clone github-https-url <span class="cm-comment"># my value: https://github.com/Formation67/my-app.git</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-builtin">cd</span> my-app</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre><span class="cm-builtin">ls</span> <span class="cm-attribute">-al</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre><span class="cm-builtin">cd</span> .git</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre><span class="cm-builtin">cd</span> ..</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre><span class="cm-builtin">git</span> status</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">pwd
+cd space
+git clone github-https-url # my value: https://github.com/Formation67/my-app.git
+ls
+cd my-app
+ls
+ls -al
+cd .git
+ls
+cd ..
+clear
+git status</pre></div></div></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Git Workflow</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk res"><figure role="group" class="resInFlow png"><div class="resInFlow_co "><a href="../res/21_basics.png" class="imgZoom" target="_blank" onclick="scImgMgr.loading(); return false;" title="Cliquez pour agrandir (nouvelle fen&ecirc;tre)"><img src="../res/21_basics_1.png" width="472" height="630" alt></a></div></figure></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-builtin">cd</span> space</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">ls</span> <span class="cm-comment"># vide</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-builtin">git</span> clone https://github.com/Formation67/my-app.git</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-builtin">cd</span> my-app</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre>npp hipster.txt <span class="cm-comment"># ajouter un paragraphe &agrave; partir de https://fr.lipsum.com/</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre><span class="cm-builtin">git</span> add hipster.txt</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre><span class="cm-builtin">git</span> commit <span class="cm-comment"># Add message in notepad++</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">14</div><pre><span class="cm-builtin">git</span> pull origin master <span class="cm-comment"># pour r&eacute;cup&eacute;rer et fusionner les changements distants</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">15</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">16</div><pre><span class="cm-builtin">git</span> push origin master</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">17</div><pre></pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">cd space
+ls # vide
+git clone https://github.com/Formation67/my-app.git
+cd my-app
+ls
+git status
+npp hipster.txt # ajouter un paragraphe &agrave; partir de https://fr.lipsum.com/
+ls
+git status
+git add hipster.txt
+git status
+git commit # Add message in notepad++
+git status
+git pull origin master # pour r&eacute;cup&eacute;rer et fusionner les changements distants
+clear
+git push origin master
+</pre></div></div></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Tracked Files / Express Commit</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk "><p>Liste tous les fichiers &quot;<strong class="txt_emp_is ">tracked</strong>&quot;</p></div><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-builtin">cd</span> my-app</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre>npp hipster.txt <span class="cm-comment"># Ajouter du texte de https://fr.lipsum.com/</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-builtin">git</span> commit <span class="cm-attribute">-am</span> <span class="cm-string">&quot;Adding more ipsum text&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre><span class="cm-builtin">git</span> ls-files     <span class="cm-comment"># all tracked files</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre>npp newfile.txt  <span class="cm-comment"># ajouter du texte de https://fr.lipsum.com/</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre><span class="cm-builtin">git</span> ls-files     <span class="cm-comment"># le fichier newfile.txt n'est pas list&eacute;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre><span class="cm-builtin">git</span> add newfile.txt</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre><span class="cm-builtin">git</span> ls-files     <span class="cm-comment"># newfile.txt est list&eacute;</span></pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">cd my-app
+ls
+git status
+npp hipster.txt # Ajouter du texte de https://fr.lipsum.com/
+git commit -am &quot;Adding more ipsum text&quot;
+git ls-files     # all tracked files
+npp newfile.txt  # ajouter du texte de https://fr.lipsum.com/
+git status
+git ls-files     # le fichier newfile.txt n'est pas list&eacute;
+git add newfile.txt
+git status
+git ls-files     # newfile.txt est list&eacute;</pre></div></div></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>&Eacute;dition de fichier</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-builtin">cd</span> my-app</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre>npp hipster.txt    <span class="cm-comment"># ajouter du texte de https://fr.lipsum.com/</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre><span class="cm-builtin">git</span> commit <span class="cm-attribute">-m</span> <span class="cm-string">&quot;Adding new file&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre><span class="cm-builtin">git</span> add hipster.txt</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre><span class="cm-builtin">git</span> commit <span class="cm-attribute">-m</span> <span class="cm-string">&quot;More ipsum for hipsters&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre><span class="cm-builtin">git</span> status</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">cd my-app
+clear
+ls
+npp hipster.txt    # ajouter du texte de https://fr.lipsum.com/
+git status
+git commit -m &quot;Adding new file&quot;
+git status
+git add hipster.txt
+git status
+git commit -m &quot;More ipsum for hipsters&quot;
+git status</pre></div></div></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Ajout de fichiers de fa&ccedil;on r&eacute;cursive</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-builtin">cd</span> my-app</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-builtin">mkdir</span> <span class="cm-attribute">-p</span> level1/level2/level3 <span class="cm-comment"># construire une structure de r&eacute;pertoire</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-builtin">cd</span> level1</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre>pwd</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre>npp level1-file.txt <span class="cm-comment"># ajouter du texte de https://fr.lipsum.com/</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre><span class="cm-builtin">cd</span> level2</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre>npp level2-file.txt <span class="cm-comment"># ajouter du texte de https://fr.lipsum.com/</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre><span class="cm-builtin">cd</span> level3</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre>npp level3-file.txt <span class="cm-comment"># ajouter du texte de https://fr.lipsum.com/</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">14</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">15</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">16</div><pre><span class="cm-builtin">cd</span> ../../..</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">17</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">18</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">19</div><pre><span class="cm-builtin">git</span> add .</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">20</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">21</div><pre><span class="cm-builtin">git</span> commit <span class="cm-attribute">-m</span> <span class="cm-string">&quot;multi level&quot;</span></pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">cd my-app
+git status
+mkdir -p level1/level2/level3 # construire une structure de r&eacute;pertoire
+ls
+cd level1
+pwd
+npp level1-file.txt # ajouter du texte de https://fr.lipsum.com/
+ls
+cd level2
+npp level2-file.txt # ajouter du texte de https://fr.lipsum.com/
+ls
+cd level3
+npp level3-file.txt # ajouter du texte de https://fr.lipsum.com/
+ls
+clear
+cd ../../..
+ls
+git status
+git add .
+git status
+git commit -m &quot;multi level&quot;</pre></div></div></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Annuler des actions</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-builtin">cd</span> my-app</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-builtin">cd</span> level1</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre>npp level1-file.txt <span class="cm-comment"># ajouter du texte de https://fr.lipsum.com/</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre><span class="cm-builtin">git</span> add level1-file.txt</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre>npp level1-file.txt <span class="cm-comment"># ajouter du texte de https://fr.lipsum.com/</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre><span class="cm-builtin">git</span> reset HEAD level1-file.txt <span class="cm-comment"># pour d&eacute;sindexer un fichier</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">14</div><pre>npp level1-file.txt</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">15</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">16</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">17</div><pre><span class="cm-builtin">git</span> checkout <span class="cm-attribute">--</span> level1-file.txt <span class="cm-comment"># to discard changes in working directory</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">18</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">19</div><pre>npp level1-file.txt</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">cd my-app
+ls
+git status
+cd level1
+ls
+npp level1-file.txt # ajouter du texte de https://fr.lipsum.com/
+git status
+git add level1-file.txt
+git status
+npp level1-file.txt # ajouter du texte de https://fr.lipsum.com/
+clear
+git status
+git reset HEAD level1-file.txt # pour d&eacute;sindexer un fichier
+npp level1-file.txt
+clear
+git status
+git checkout -- level1-file.txt # to discard changes in working directory
+git status
+npp level1-file.txt</pre></div></div></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Rename</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-builtin">cd</span> my-app</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-builtin">cd</span> level1/level2/level3</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre>pwd</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre><span class="cm-builtin">git</span> <span class="cm-builtin">mv</span> level3-file.txt level3.txt  <span class="cm-comment"># renommer &agrave; partir de la commande git</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre><span class="cm-builtin">git</span> commit <span class="cm-attribute">-m</span> <span class="cm-string">&quot;renaming level3 file&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre><span class="cm-builtin">cd</span> ..</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">14</div><pre>pwd</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">15</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">16</div><pre><span class="cm-builtin">mv</span> level2-file.txt level2.txt <span class="cm-comment"># renommer &agrave; partir de l'os</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">17</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">18</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">19</div><pre><span class="cm-builtin">git</span> add <span class="cm-attribute">-A</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">20</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">21</div><pre><span class="cm-builtin">git</span> commit <span class="cm-attribute">-m</span> <span class="cm-string">&quot;Rename commit&quot;</span></pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">cd my-app
+ls
+cd level1/level2/level3
+pwd
+clear
+ls
+git status
+git mv level3-file.txt level3.txt  # renommer &agrave; partir de la commande git
+ls
+git status
+git commit -m &quot;renaming level3 file&quot;
+cd ..
+clear
+pwd
+ls
+mv level2-file.txt level2.txt # renommer &agrave; partir de l'os
+ls
+git status
+git add -A
+git status
+git commit -m &quot;Rename commit&quot;</pre></div></div></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Deleting Files</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-builtin">cd</span> my-app</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre>npp doomed.txt <span class="cm-comment">#ajouter du texte</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre><span class="cm-builtin">git</span> status <span class="cm-comment"># =&gt; no traked file</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre><span class="cm-builtin">git</span> <span class="cm-builtin">rm</span> doomed.txt <span class="cm-comment"># remove no tracked file =&gt; error</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre><span class="cm-builtin">rm</span> doomed.txt <span class="cm-comment"># remove from os</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre><span class="cm-builtin">git</span> ls-files</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">14</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">15</div><pre><span class="cm-builtin">git</span> <span class="cm-builtin">rm</span> newfile.txt</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">16</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">17</div><pre><span class="cm-builtin">git</span> commit <span class="cm-attribute">-m</span> <span class="cm-string">&quot;Deleting new file&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">18</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">19</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">20</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">21</div><pre><span class="cm-builtin">git</span> ls-files</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">22</div><pre><span class="cm-builtin">git</span> <span class="cm-builtin">rm</span> hipster.txt</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">23</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">24</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">25</div><pre><span class="cm-builtin">git</span> reset HEAD hipster.txt</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">26</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">27</div><pre><span class="cm-builtin">git</span> checkout <span class="cm-attribute">--</span> hipster.txt</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">28</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">29</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">30</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">31</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">32</div><pre><span class="cm-builtin">rm</span> hipster.txt</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">33</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">34</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">35</div><pre><span class="cm-builtin">git</span> add <span class="cm-attribute">-A</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">36</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">37</div><pre><span class="cm-builtin">git</span> commit <span class="cm-attribute">-m</span> <span class="cm-string">&quot;deleting hipeter.txt&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">38</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">39</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">40</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">41</div><pre><span class="cm-builtin">rm</span> <span class="cm-attribute">-rf</span> level1</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">42</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">43</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">44</div><pre><span class="cm-builtin">git</span> add <span class="cm-attribute">-A</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">45</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">46</div><pre><span class="cm-builtin">git</span> commit <span class="cm-attribute">-m</span> <span class="cm-string">&quot;deleting level1 and all children&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">47</div><pre><span class="cm-builtin">git</span> status</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">cd my-app
+ls
+git status
+clear
+npp doomed.txt #ajouter du texte
+ls
+git status # =&gt; no traked file
+git rm doomed.txt # remove no tracked file =&gt; error
+rm doomed.txt # remove from os
+ls
+git status
+clear
+git ls-files
+ls
+git rm newfile.txt
+git status
+git commit -m &quot;Deleting new file&quot;
+git status
+clear
+git status
+git ls-files
+git rm hipster.txt
+ls
+git status
+git reset HEAD hipster.txt
+git status
+git checkout -- hipster.txt
+ls
+git status
+clear
+ls
+rm hipster.txt
+ls
+git status
+git add -A
+git status
+git commit -m &quot;deleting hipeter.txt&quot;
+git status
+clear
+ls
+rm -rf level1
+ls
+git status
+git add -A
+git status
+git commit -m &quot;deleting level1 and all children&quot;
+git status</pre></div></div></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>History</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-builtin">git</span> help log</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">cd</span> my-app</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-builtin">git</span> log</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre><span class="cm-builtin">git</span> log <span class="cm-attribute">--abbrev-commit</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre><span class="cm-builtin">git</span> log <span class="cm-attribute">--oneline</span> <span class="cm-attribute">--graph</span> <span class="cm-attribute">--decorate</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre><span class="cm-builtin">git</span> log ae6f872...761b911</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre><span class="cm-builtin">git</span> log <span class="cm-attribute">--since</span><span class="cm-operator">=</span><span class="cm-string">&quot;3 days ago&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre><span class="cm-builtin">git</span> log <span class="cm-attribute">--</span> hipster.txt</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">14</div><pre><span class="cm-builtin">git</span> show 1119877eb26ab06c336303008f6148873dd2c4bb</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">15</div><pre><span class="cm-builtin">clear</span></pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">git help log
+cd my-app
+git status
+clear
+git log
+git log --abbrev-commit
+git log --oneline --graph --decorate
+git log ae6f872...761b911
+git log --since=&quot;3 days ago&quot;
+clear
+ls
+git log -- hipster.txt
+clear
+git show 1119877eb26ab06c336303008f6148873dd2c4bb
+clear</pre></div></div></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Git Alias</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-builtin">cd</span> my-app</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-builtin">git</span> log <span class="cm-attribute">--all</span> <span class="cm-attribute">--graph</span> <span class="cm-attribute">--decorate</span> <span class="cm-attribute">--oneline</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre><span class="cm-builtin">git</span> hist</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre><span class="cm-builtin">git</span> config <span class="cm-attribute">--global</span> alias.hist <span class="cm-string">&quot;log --all --graph --decorate --oneline&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre><span class="cm-builtin">git</span> hist</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre>npp ~/.gitconfig <span class="cm-comment"># verification</span></pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">cd my-app
+ls
+git status
+clear
+git log --all --graph --decorate --oneline
+git hist
+git config --global alias.hist &quot;log --all --graph --decorate --oneline&quot;
+git hist
+clear
+npp ~/.gitconfig # verification</pre></div></div></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>EXCLURE DU SUIVI DE VERSION</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-builtin">cd</span> my-app</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-builtin">ls</span> <span class="cm-attribute">-al</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre>npp .gitignore</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre><span class="cm-builtin">ls</span> <span class="cm-attribute">-al</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">7</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">8</div><pre><span class="cm-builtin">git</span> add .gitignore</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">9</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">10</div><pre><span class="cm-builtin">git</span> commit</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">11</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">12</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">13</div><pre>npp access.log <span class="cm-comment">#ajouter du texte</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">14</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">15</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">16</div><pre>npp .gitignore <span class="cm-comment"># ajouter fichier &agrave; exclure</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">17</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">18</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">19</div><pre><span class="cm-builtin">mkdir</span> log</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">20</div><pre><span class="cm-builtin">mv</span> access.log log</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">21</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">22</div><pre><span class="cm-builtin">cd</span> log</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">23</div><pre>ll</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">24</div><pre><span class="cm-builtin">cp</span> access.log access.2014-11-04</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">25</div><pre>ll</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">26</div><pre><span class="cm-builtin">cd</span> ..</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">27</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">28</div><pre>npp .gitignore <span class="cm-comment"># exclure le r&eacute;pertore i.e log/</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">29</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">30</div><pre><span class="cm-builtin">git</span> commit <span class="cm-attribute">-am</span> <span class="cm-string">&quot;Excluding log file directory&quot;</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">31</div><pre><span class="cm-builtin">git</span> status</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">cd my-app
+ls
+git status
+ls -al
+npp .gitignore
+ls -al
+git status
+git add .gitignore
+git status
+git commit
+git status
+ls
+npp access.log #ajouter du texte
+ls
+git status
+npp .gitignore # ajouter fichier &agrave; exclure
+clear
+git status
+mkdir log
+mv access.log log
+ls
+cd log
+ll
+cp access.log access.2014-11-04
+ll
+cd ..
+git status
+npp .gitignore # exclure le r&eacute;pertore i.e log/
+git status
+git commit -am &quot;Excluding log file directory&quot;
+git status</pre></div></div></div></div></div></div></section><section class="hBk expUcDiv"><h3 class="hBk_ti"><span>Git Basics Cleanup</span></h3><div class="hBk_co "><div class="iBk info"><div class="iBk_co "><div class="rBk listing"><div><div class="code"><div class="code-form "><div class="CodeMirror-static cm-s-default" data-lang="text/x-sh"><div class="CodeMirror-code"><div class="CodeMirror-line"><div class="CodeMirror-linenumber">1</div><pre><span class="cm-builtin">cd</span> my-app</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">2</div><pre><span class="cm-builtin">ls</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">3</div><pre><span class="cm-builtin">git</span> status</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">4</div><pre><span class="cm-builtin">clear</span></pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">5</div><pre><span class="cm-builtin">git</span> pull origin master</pre></div><div class="CodeMirror-line"><div class="CodeMirror-linenumber">6</div><pre><span class="cm-builtin">git</span> push origin master</pre></div></div></div></div><pre class="code-raw noIndex " style="display:none;">cd my-app
+ls
+git status
+clear
+git pull origin master
+git push origin master</pre></div></div></div></div></div></div></section></div></section></div></div><div id="navigation" tabindex="-1"><hr class="hidden"><nav class="pageTurner" role="navigation"><ul><li><a rel="prev" href="Git_3.html" target="_self" class="btnNav prev" title="Pr&eacute;c&eacute;dent (GitHub - Basics)"><span>Pr&eacute;c&eacute;dent</span></a></li><li><a rel="next" href="Git_5.html" target="_self" class="btnNav next" title="Suivant (Afficher les modifications)"><span>Suivant</span></a></li></ul></nav></div></div><div id="toolbox"><nav id="menu" class="pageSelector" role="navigation" tabindex="-1" aria-label="menu principal"><hr class="hidden"><ul class="mnu static" data-totalPages="6"><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="Git_1.html"><a href="Git_1.html" target="_self" class="item"><span>Configuration de git</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="Git_2.html"><a href="Git_2.html" target="_self" class="item"><span>Premier Pas</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="Git_3.html"><a href="Git_3.html" target="_self" class="item"><span>GitHub - Basics</span></a></div></li><li class="sel_yes anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="Git_4.html"><span class="item"><span>Les bases de Git</span></span></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="Git_5.html"><a href="Git_5.html" target="_self" class="item"><span>Afficher les modifications</span></a></div></li><li class="sel_no anc_no type_l  dpt_0 expUc"><div class="lbl type_l" id="Git_6.html"><a href="Git_6.html" target="_self" class="item"><span>Branche et merge</span></a></div></li></ul></nav><div id="tools" tabindex="-1"><hr class="hidden"><nav class="headingSelector" role="navigation"><ul class="mnu"><li class="anc_no home" data-position="uncle"><div class="lbl"><a href="Git.html" target="_self" class="item" type="index" title="Page d'accueil du module"><span>Accueil</span></a></div></li><li class="anc_yes module" data-position="parent"><div class="lbl"><span class="item"><span>Module</span></span></div></li></ul></nav></div></div></main><footer id="footer" role="contentinfo" tabindex="-1"><hr class="hidden"><a id="linkSp" target="_blank" href="https://www.scenari.org" title="R&eacute;alis&eacute; avec Scenari (nouvelle fen&ecirc;tre)"><span><img alt="R&eacute;alis&eacute; avec Scenari (nouvelle fen&ecirc;tre)" src="../skin/img/tpl/scBtn.png"></span></a></footer></div>
+  <script type="text/JavaScript" src="../skin/js/skin.js"></script>
+  <script type="text/javascript">tplMgr.init();scCodeMgr.init();scMediaMgr.init("des:.mediaPlayer",{processYoutubeUrls :true});scImgMgr.init();outMgr.init();</script>
+ </body>
+</html>
