@@ -1,0 +1,70 @@
+Git =>ecriture code
+Maven => compilation du code, organisation ds standard, packaging, test
+Jenkins => orchestration, deploiement
+complete la methodologie avec le deploiement
+Eclipse 
+
+
+JAVA JDK
+adapter le $PATH => PATH:$PATH:C:\PROG\java8\bin
+
+JAVA_HOME=C:\PROG\java8\
+echo %JAVA_HOME%
+
+javac prog.java => genere un .class
+le .class est le code qui s execute dans la jvm qui s execute sur toutes plateformes
+java prog (sans le .class) 
+
+
+
+MAVEN
+hierarchie, cycle de vie, dependance de librairies
+POM heritage
+systeme de plugins
+
+ ancienement ANT, decrit tous les actions, variable , dependance etc... 
+ inutile sur Maven car il saut par default toute ces informations.
+ /src/main/java
+ 
+ 
+POM fichier de configuration du projet java
+Artefact c est le nom du  projet
+GroupID nom de dmaine de la société
+
+Version
+1.2.3 : 
+ 1. changement majeur pas forcement compatible avec l existant
+ 2. ajout de fonctionnalité mais reste compatibles
+ 3. correction de bug
+ 
+Repository 
+JAR => application desktop
+WAR => interface accesible pour le web
+ear => entreprise archive (jboss) 
+EAR = JAR+WAR
+
+
+Le format POM
+langage a balise
+
+Projet Maven 
+ src 
+ target
+ pom.xml
+
+ /src/main/java => fichier java
+ /src/main/resources => fichier de configuration (clé=valeur) xml ou properties => evide de recompiler le code java
+ 
+ /src/test/java permet de tester le code issue du main/java
+ Maven compile le code et le met dans target =>.class
+ 
+ 
+mvn archetype:generate -DgroupId=com.formation -DartifactId=java-project -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+mvn compile
+mvn test
+mvn package (par default fait le compile +test)
+mvn clean (vire tout et purge le repertoire target)
+
+
+
