@@ -66,5 +66,57 @@ mvn test
 mvn package (par default fait le compile +test)
 mvn clean (vire tout et purge le repertoire target)
 
+C:\Users\Administrateur\.m2\repository => liste des composants telecharges ou plugins
+ => organisation issu du pom.xml 
 
 
+mvn install => installe directement dans le path de l utilisateur C:\Users\Administrateur\.m2\repository\com\formation\java-project
+setting.xml => configuration du proxy
+
+
+java -cp =classpass
+maven ne package pas les application externes a sa classe => plugin shade maven
+
+mvn clean package
+
+
+
+
+Git
+le .git => historique des modifications
+git log => hash du commit
+git log --oneline
+git log --oneline --graph
+git log --oneline --graph --decorate --all
+le head.master deplacement du dernier commit 
+le head se deplace dans la branche et master reste au dernier commit
+HEAD=> pointe sur la branche
+MASTER => dernier commit
+Administrateur@UTILISA-KUDCRLR MINGW64 ~/Desktop/space/project-branche (dev)
+	$ git log --oneline
+	3ff6041 (HEAD -> dev) D1
+	1a4e6f5 (master) C2
+	448f9e2 C1
+	9bbf6d7 initial commit
+
+	$ git log --oneline
+	1a4e6f5 (HEAD -> master) C2
+	448f9e2 C1
+	9bbf6d7 initial commit
+
+	$ git log --oneline --graph --decorate --all
+	* 9c8061d (HEAD -> dev) D2
+	* 3ff6041 D1
+	* 1a4e6f5 (master) C2
+	* 448f9e2 C1
+	* 9bbf6d7 initial commit
+
+	$ git log --oneline --graph --decorate --all
+	* 9c8061d (HEAD -> master, dev) D2
+	* 3ff6041 D1
+	* 1a4e6f5 C2
+	* 448f9e2 C1
+	* 9bbf6d7 initial commit
+git rebase => aligen par rapport au revert / reset
+learngitbranching.js
+ 
