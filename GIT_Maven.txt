@@ -118,4 +118,14 @@ Administrateur@UTILISA-KUDCRLR MINGW64 ~/Desktop/space/project-branche (dev)
 	* 448f9e2 C1
 	* 9bbf6d7 initial commit
 git rebase => aligen par rapport au revert / reset
-https://learngitbranching.js.org/ 
+learngitbranching.js
+
+eclipse => version for  enterprise developer
+new file : maven project => groupid/artefacts/version
+indentation : CTRL+SHIFT+F
+
+
+ignore certain fichiers dans git
+creation d'un .gitignore avec les fichiers a exclure
+
+
