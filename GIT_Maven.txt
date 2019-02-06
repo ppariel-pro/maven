@@ -120,6 +120,14 @@ Administrateur@UTILISA-KUDCRLR MINGW64 ~/Desktop/space/project-branche (dev)
 git rebase => aligen par rapport au revert / reset
 learngitbranching.js
 
+revert
+======
+git reset --hard $hash_commit
+git resert --hard HEAD^ 
+git resert --hard HEAD^^
+git resert --hard HEAD~2
+
+
 eclipse => version for  enterprise developer
 new file : maven project => groupid/artefacts/version
 indentation : CTRL+SHIFT+F
